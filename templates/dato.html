@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %} {{ dato['fecha'] }} {% endblock %}</h2>
+    <p>{{ dato['temperatura'] }}</p>
+    <p>{{ dato['humedad'] }}</p>
+{% endblock %}

@@ -1,0 +1,31 @@
+
+h1 {
+    border: 2px #eee solid;
+    color: rgb(190, 112, 39);
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+    color: rgb(41, 110, 23);
+    text-align: center;
+    padding: 10px;
+}
+
+
+h5 {
+    color: rgb(2, 58, 161);
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.panel {
+    border: 2px #eee solid;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid center" >
+
+    <h2>Intensidad de Luz</h2>
+
+    <div class="container-fluid center" >
+        <form method="post">
+            <div class="row justify-content-center">
+                <div class="col col-lg-2">
+                    <label for="title"><h5>Limite Intensidad Luz:</h5></label>
+                </div>
+                <div class="col col-lg-2">
+                    <input type="text" name="valor"
+                        placeholder="Valor" class="form-control"
+                        value="{{ request.form['valor'] }}">
+                    </input>
+                </div>
+                <div class="col col-lg-2">
+                    <button type="submit" class="btn btn-primary">Modificar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <canvas id="lineChart" width="900" height="400"></canvas>
+    <script>
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        var lineChart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: {{ labels | safe }},
+                datasets: [
+                    {
+                        label: "Intensidad Luz (lux)",
+                        data: {{ values | safe }},
+                        fill: false,
+                        borderColor: "rgb(179, 156, 27)",
+                        lineTension: 0.1
+                    }
+                ]
+            },
+            options: {
+                responsive:false
+            }
+        });
+    </script>
+</div>
+
+{% endblock %}

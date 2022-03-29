@@ -1,0 +1,29 @@
+<div id="load" class="container-fluid">
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Temperatura</th>
+        <th scope="col">Humedad</th>
+        <th scope="col">Luminosidad</th>
+        <th scope="col">Humedad Suelo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Actualmente:</th>
+        <td>{{ temperatura }}</td>
+        <td>{{ humedad }}</td>
+        <td>{{ intensidad_luz }}</td>
+        <td>{{ humedad_suelo }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Limite:</th>
+        <td>{{ limT }}</td>
+        <td>{{ limH }}</td>
+        <td>{{ limL }}</td>
+        <td>{{ limS }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
